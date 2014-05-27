@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CLARIFYDW" Class="CaseDataContext" Serialization="Unidirectional" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=CHS-BBECDB;Initial Catalog=CLARIFYDW;Persist Security Info=True;User ID=bbportalwebuser" SettingsObjectName="WINotify.Properties.Settings" SettingsPropertyName="CLARIFYDWConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.FACT_CASE" Member="FACT_CASEs">
+    <Type Name="FACT_CASE">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="CaseNumber" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="TopicCode" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Condition" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="DateAdded" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CaseAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateAddedID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CustomerSupport" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SiteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CaseTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CaseStatusID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CaseSeverityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContactID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OwnerUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatorUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ETLControlID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TAMStatus" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DSSTYPE" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Column Name="CCList1" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CCList2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CRID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WIPBIN" Type="System.String" DbType="VarChar(24)" CanBeNull="true" />
+      <Column Name="CQTICKET" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WorkItem" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClientTrackingID" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="CaseHistory" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SolutionNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FACT_CASECLOSE" Member="FACT_CASECLOSEs">
+    <Type Name="FACT_CASECLOSE">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PhoneTime" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResearchTime" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CaseID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CloserUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateClosedID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResolutionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ETLControlID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CloseCategory" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="CloseSubcategory" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="CloseResolution" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="CloseRootCause" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="ClosePerformance" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIM_PRODUCT" Member="DIM_PRODUCTs">
+    <Type Name="DIM_PRODUCT">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SKU" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Line" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Family" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Version" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Maintenance" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SerialNumber" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NumberOfUsers" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="ShipDateID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ETLControlID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SiteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIM_SITE" Member="DIM_SITEs">
+    <Type Name="DIM_SITE">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SiteID" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Division" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Affiliation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SupportSite" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ABS" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Alias" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Notes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="PreviousSystem" Type="System.String" DbType="VarChar(35)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PrimaryAddressLine1" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PrimaryAddressLine2" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PrimaryAddressLine3" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PrimaryCity" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="PrimaryState" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="PrimaryZIP" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="PrimaryCountry" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="BillingAddressLine1" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="BillingAddressLine2" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="BillingAddressLine3" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="BillingCity" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="BillingState" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="BillingZIP" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="BillingCountry" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="ShippingAddressLine1" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ShippingAddressLine2" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ShippingAddressLine3" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ShippingCity" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="ShippingState" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="ShippingZIP" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ShippingCountry" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="ClientSinceDateID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParentSiteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EBusSiteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BusinessUnit" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="bbpsauthenticated" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIM_CASETYPE" Member="DIM_CASETYPEs">
+    <Type Name="DIM_CASETYPE">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIM_USER" Member="DIM_USERs">
+    <Type Name="DIM_USER">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LogIn" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Supervisor" Type="System.String" DbType="VarChar(61)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="VarChar(61)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIM_CONTACT" Member="DIM_CONTACTs">
+    <Type Name="DIM_CONTACT">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="VarChar(61)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EMail" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DoNotMail" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DoNotEMail" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PrimaryRole" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="PrimarySiteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
